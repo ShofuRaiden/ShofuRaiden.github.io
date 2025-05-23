@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unidad 1 - Arquitectura de Computo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #7a0000;
+    }
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    section {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+
+    .btn-volver {
+      display: inline-block;
+      background-color: #7a0000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-volver:hover {
+      background-color: #a10000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="index.html" class="btn-volver">Volver al Inicio</a>
+
+  <h1>Unidad 1: Arquitectura de Computo</h1>
+
+  <section>
+    <h2>1.1 Módulos de Arquitectura</h2>
+    <h3>1.1.1 Clásicas</h3>
+    <p>Las arquitecturas clásicas se basan en el modelo Von Neumann, donde la CPU ejecuta instrucciones almacenadas en memoria secuencialmente.</p>
+    <h3>1.1.2 Segmentadas</h3>
+    <p>La arquitectura segmentada divide la ejecución en etapas, mejorando la eficiencia al permitir la ejecución simultánea de distintas fases.</p>
+    <h3>1.1.3 Multiprocesamiento</h3>
+    <p>El multiprocesamiento utiliza múltiples procesadores trabajando en paralelo para mejorar el rendimiento y la capacidad de procesamiento.</p>
+  </section>
+
+  <section>
+    <h2>1.2 Análisis de componentes</h2>
+
+    <h3>1.2.1 Arquitecturas</h3>
+    <p>Se analizan los diferentes componentes estructurales que componen una arquitectura computacional.</p>
+    <h4>1.2.1.1 Unidad Central de Procesamiento</h4>
+    <p>Es el cerebro del sistema, encargado de ejecutar instrucciones y controlar el funcionamiento general.</p>
+    <h4>1.2.1.2 Unidad Aritmética Lógica</h4>
+    <p>Realiza operaciones matemáticas y lógicas básicas que son fundamentales para el procesamiento.</p>
+    <h4>1.2.1.3 Registros</h4>
+    <p>Pequeñas áreas de almacenamiento de alta velocidad dentro del procesador para datos temporales.</p>
+    <h4>1.2.1.4 Buses</h4>
+    <p>Canales de comunicación que transportan datos entre los diferentes componentes del sistema.</p>
+
+    <h3>1.2.2 Memoria</h3>
+    <h4>1.2.2.1 Conceptos básicos del manejo de la memoria</h4>
+    <p>Estudia cómo se organiza y gestiona la memoria para almacenar datos e instrucciones.</p>
+    <h4>1.2.2.2 Memoria principal</h4>
+    <p>Memoria RAM donde se almacenan los datos y programas en ejecución.</p>
+    <h4>1.2.2.3 Memoria caché</h4>
+    <p>Memoria rápida que almacena temporalmente datos de uso frecuente para acelerar el acceso.</p>
+
+    <h3>1.2.3 Manejo de entrada/salida</h3>
+    <h4>1.2.3.1 Módulos de entrada/salida</h4>
+    <p>Dispositivos y circuitos que gestionan la comunicación entre el sistema y el exterior.</p>
+    <h4>1.2.3.2 Entrada/salida programada</h4>
+    <p>La CPU controla directamente las operaciones de E/S mediante instrucciones específicas.</p>
+    <h4>1.2.3.3 Entrada/salida mediante interrupciones</h4>
+    <p>Permite que los dispositivos notifiquen a la CPU cuando requieren atención, optimizando recursos.</p>
+    <h4>1.2.3.4 Acceso directo a memoria</h4>
+    <p>El dispositivo de E/S puede acceder directamente a la memoria sin intervención de la CPU.</p>
+    <h4>1.2.3.5 Canales y procesadores de entrada/salida</h4>
+    <p>Mecanismos especializados para manejar múltiples operaciones de E/S en paralelo.</p>
+
+    <h3>1.2.4 Buses</h3>
+    <h4>1.2.4.1 Tipos de buses</h4>
+    <p>Se clasifican según su función: datos, direcciones y control.</p>
+    <h4>1.2.4.2 Estructura de buses</h4>
+    <p>Describe la organización física y lógica que permite la comunicación eficiente.</p>
+    <h4>1.2.4.3 Jerarquía de buses</h4>
+    <p>Relación entre buses principales y secundarios para optimizar el tráfico de información.</p>
+
+    <h3>1.2.5 Interrupciones</h3>
+    <p>Eventos que detienen temporalmente la ejecución normal para atender sucesos prioritarios.</p>
+  </section>
+
+</body>
+
+</html>

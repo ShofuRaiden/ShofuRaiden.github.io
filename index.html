@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARQUITECTURA DE COMPUTADORAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header,
+    main,
+    footer {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    header {
+      background-color: #7a0000;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 30px 20px;
+    }
+
+    header img.logo {
+      height: 70px;
+      position: absolute;
+      top: 15px;
+    }
+
+    header img.left {
+      left: 20px;
+    }
+
+    header img.right {
+      right: 20px;
+    }
+
+    header h1,
+    header h2 {
+      margin: 0;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      font-weight: normal;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+    }
+
+    .tema-principal {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tema-principal svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 8px;
+      fill: #2e0000;
+    }
+
+    #temario a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    #temario a:hover {
+      text-decoration: underline;
+    }
+
+    #practicas {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    #practicas h2 {
+      margin-bottom: 15px;
+      color: #7a0000;
+    }
+
+    #practicas ul {
+      list-style: decimal inside;
+    }
+
+    #practicas ul li {
+      margin-bottom: 8px;
+    }
+
+    #practicas ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    #practicas ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Nuevo estilo para el apartado Información */
+
+    #informacion {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    #informacion h2 {
+      color: #7a0000;
+      margin-bottom: 10px;
+    }
+
+    #informacion a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: #7a0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    #informacion a:hover {
+      background-color: #5c0000;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    footer a {
+      color: #7a0000;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="tecnologico_nacional_de_mexico_campus_saltillo_cover.jfif" alt="Logo Izquierdo" class="logo left" />
+    <img src="escudo_2977c841a7.png" alt="Logo Derecho" class="logo right" />
+    <h1>Tecnológico Nacional de México</h1>
+    <h2>Instituto Tecnológico de Saltillo</h2>
+  </header>
+
+  <main>
+    <section id="temario">
+      <div class="container">
+        <div class="box">
+          <h2 class="tema-principal">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 4H2v16h20V6H12l-2-2z" />
+            </svg>
+            <a href="unidad1proyecto.html">Unidad 1: Arquitectura de Computo</a>
+          </h2>
+        </div>
+        <div class="box">
+          <h2 class="tema-principal">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 4H2v16h20V6H12l-2-2z" />
+            </svg>
+            <a href="unidad2proyecto.html">Unidad 2: Estructura y funcionamiento de la unidad central de procesamiento</a>
+          </h2>
+        </div>
+        <div class="box">
+          <h2 class="tema-principal">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 4H2v16h20V6H12l-2-2z" />
+            </svg>
+            <a href="unidad3proyecto.html">Unidad 3: Selección de componentes para ensamble de equipo de computo</a>
+          </h2>
+        </div>
+        <div class="box">
+          <h2 class="tema-principal">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 4H2v16h20V6H12l-2-2z" />
+            </svg>
+            <a href="unidad4proyecto.html">Unidad 4: Procesamiento paralelo</a>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="practicas">
+      <h2>Prácticas</h2>
+      <ul>
+        <li><a href="PRACTICA NÚMERO 1.pdf" target="_blank" rel="noopener noreferrer">Práctica 1</a></li>
+        <li><a href="PRACTICA NÚMERO 2.pdf" target="_blank" rel="noopener noreferrer">Práctica 2</a></li>
+        <li><a href="PRACTICA NÚMERO 3.pdf" target="_blank" rel="noopener noreferrer">Práctica 3</a></li>
+        <li><a href="PRACTICA NÚMERO 4.pdf" target="_blank" rel="noopener noreferrer">Práctica 4</a></li>
+        <li><a href="PRACTICA NÚMERO 5.pdf" target="_blank" rel="noopener noreferrer">Práctica 5</a></li>
+        <li><a href="COTIZACION DE EQUIPOS.pdf" target="_blank" rel="noopener noreferrer">Cotizacion de equipos</a></li>
+        <li><a href="DISEÑOS DE EQUIPOS.pdf" target="_blank" rel="noopener noreferrer">Diseño de equipos</a></li>
+      </ul>
+    </section>
+
+    <section id="informacion">
+      <h2>Información</h2>
+      <a href="informacion.html">Datos sobre el autor</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    <p><a href="https://saltillo.tecnm.mx" target="_blank" rel="noopener noreferrer">Sitio oficial del Tecnológico de Saltillo</a></p>
+  </footer>
+</body>
+
+</html>

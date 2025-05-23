@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitectura de computadoras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    header {
+      background-color: #560000;
+      color: white;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background-color: #333;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, 0.662);
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+      transition: background-color 0.3s ease;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: rgb(188, 188, 188);
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background-color: #eee;
+    }
+
+    .flex-item {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animated {
+      animation: fadeIn 2s ease-in;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+
+    #temario li {
+      cursor: pointer;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    #temario li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid #333;
+      transition: transform 0.3s ease;
+    }
+
+    #temario li.active::before {
+      transform: rotate(180deg);
+    }
+
+    #temario li ul {
+      display: none;
+      margin-left: 15px;
+    }
+
+    #temario li.active > ul {
+      display: block;
+    }
+
+    .tema-principal {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .btn-toggle {
+      background-color: #390000;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    #temario a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    #temario a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="animated">ARQUITECTURA DE COMPUTADORAS</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#temario">Temario</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="inicio" class="container">
+      <div class="box">
+        <h2>Bienvenido</h2>
+        <p>Esta es una página de ejemplo que incluye buenas prácticas en HTML y CSS.</p>
+      </div>
+      <div class="box">
+        <h2>Características</h2>
+        <ul>
+          <li>HTML Semántico</li>
+          <li>Modelo de Caja</li>
+          <li>Flexbox y Grid</li>
+          <li>Transiciones y Animaciones</li>
+          <li>Diseño Responsivo</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="temario" class="container">
+      <div class="box">
+        <button class="btn-toggle">Mostrar/Ocultar</button>
+        <h2 class="tema-principal">Unidad 1: Arquitectura de Computadora</h2>
+        <ul>
+          <li>1.1 <a href="1.1.html">Modelo de arquitectura de computación</a>
+            <ul>
+              <li><a href="1.1.1.html">1.1.1 Críticas</a></li>
+              <li><a href="1.1.2.html">1.1.2 Segmentadas</a></li>
+              <li><a href="1.1.3.html">1.1.3 De multiprocesamiento</a></li>
+            </ul>
+          </li>
+          <li>1.2 <a href="1.2.html">Análisis de los componentes</a>
+            <ul>
+              <li>1.2.1 <a href="1.2.1.html">Arquitecturas</a>
+                <ul>
+                  <li><a href="1.2.1.1.html">1.2.1.1 Unidad central de procesamiento</a></li>
+                  <li><a href="1.2.1.2.html">1.2.1.2 Unidad lógica-aritmética</a></li>
+                  <li><a href="1.2.1.3.html">1.2.1.3 Registros</a></li>
+                  <li><a href="1.2.1.4.html">1.2.1.4 Buses</a></li>
+                </ul>
+              </li>
+              <li>1.2.2 <a href="1.2.2.html">Memoria</a>
+                <ul>
+                  <li><a href="1.2.2.1.html">1.2.2.1 Conceptos básicos del manejo de memoria</a></li>
+                  <li><a href="1.2.2.2.html">1.2.2.2 Memoria principal</a></li>
+                  <li><a href="1.2.2.3.html">1.2.2.3 Memoria caché</a></li>
+                </ul>
+              </li>
+              <li>1.2.3 <a href="1.2.3.html">Manejo de entrada/salida</a>
+                <ul>
+                  <li><a href="1.2.3.1.html">1.2.3.1 Módulo de entrada/salida</a></li>
+                  <li><a href="1.2.3.2.html">1.2.3.2 Entrada/salida programada</a></li>
+                  <li><a href="1.2.3.3.html">1.2.3.3 Acceso directo a memoria (DMA)</a></li>
+                  <li><a href="1.2.3.4.html">1.2.3.4 Entrada/salida mediante interrupciones</a></li>
+                  <li><a href="1.2.3.5.html">1.2.3.5 Canales y procesadores de entrada</a></li>
+                </ul>
+              </li>
+              <li>1.2.4 <a href="1.2.4.html">Buses</a>
+                <ul>
+                  <li><a href="1.2.4.1.html">1.2.4.1 Tipos de buses</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <button class="btn-toggle">Mostrar/Ocultar</button>
+        <h2 class="tema-principal">Unidad 2: Organización del Procesador</h2>
+        <ul>
+          <li><a href="2.1.html">2.1 Organización del procesador</a></li>
+          <li>2.2 <a href="2.2.html">Estructura de registros</a>
+            <ul>
+              <li><a href="2.2.1.html">2.2.1 Registros visibles para el usuario</a></li>
+              <li><a href="2.2.2.html">2.2.2 Registros de control y de estado</a></li>
+              <li><a href="2.2.3.html">2.2.3 Ejemplos de registros de CPU reales</a></li>
+            </ul>
+          </li>
+          <li>2.3 <a href="2.3.html">El ciclo de instrucción</a>
+            <ul>
+              <li><a href="2.3.1.html">2.3.1 Ciclo fetch - decode - execute</a></li>
+              <li><a href="2.3.2.html">2.3.2 Segmentación de instrucciones</a></li>
+              <li><a href="2.3.3.html">2.3.3 Conjuntos de instrucciones y funciones</a></li>
+              <li><a href="2.3.4.html">2.3.4 Modos de direccionamiento</a></li>
+            </ul>
+          </li>
+          <li><a href="2.4.html">2.4 Casos de estudio de CPUs reales</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <button class="btn-toggle">Mostrar/Ocultar</button>
+        <h2 class="tema-principal">Unidad 3: Selección de Componentes</h2>
+        <ul>
+          <li>3.1 <a href="3.1.html">Unidad central de procesamiento (CPU)</a>
+            <ul>
+              <li><a href="3.1.1.html">3.1.1 Controladores de BIOS</a></li>
+              <li><a href="3.1.2.html">3.1.2 Puertos de entrada/salida</a></li>
+              <li><a href="3.1.3.html">3.1.3 Controlador de interrupciones</a></li>
+              <li><a href="3.1.4.html">3.1.4 Controlador de acceso directo a memoria</a></li>
+              <li><a href="3.1.5.html">3.1.5 Circuitos de temporización</a></li>
+              <li><a href="3.1.6.html">3.1.6 Circuitos de control</a></li>
+              <li><a href="3.1.7.html">3.1.7 Controladores de video</a></li>
+            </ul>
+          </li>
+          <li>3.2 <a href="3.2.html">Aplicaciones</a>
+            <ul>
+              <li><a href="3.2.1.html">3.2.1 Entrada/salida</a></li>
+              <li><a href="3.2.2.html">3.2.2 Almacenamiento</a></li>
+              <li><a href="3.2.3.html">3.2.3 Fuentes de alimentación</a></li>
+            </ul>
+          </li>
+          <li>3.3 <a href="3.3.html">Ámbitos de servicio</a>
+            <ul>
+              <li><a href="3.3.1.html">3.3.1 Negocios</a></li>
+              <li><a href="3.3.2.html">3.3.2 Industria</a></li>
+              <li><a href="3.3.3.html">3.3.3 Comercio electrónico</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flex-container">
+      <div class="flex-item">Elemento 1</div>
+      <div class="flex-item">Elemento 2</div>
+      <div class="flex-item">Elemento 3</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Expandir subtemas al hacer clic
+    document.querySelectorAll('#temario li').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+      });
+    });
+
+    // Scroll suave para enlace "Temario"
+    document.querySelector('nav a[href="#temario"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      const section = document.querySelector('#temario');
+      section.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Botones para mostrar/ocultar unidades
+    document.querySelectorAll('.btn-toggle').forEach(function(button) {
+      button.addEventListener('click', function() {
+        const ul = this.nextElementSibling.nextElementSibling;
+        ul.style.display = ul.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+
+</html>
